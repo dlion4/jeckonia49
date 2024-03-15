@@ -13,12 +13,17 @@ This is a api framework build ontop of django rest with ninja. Check out the pro
 create vertual environment
 ### python -m venv <environment_name>
 
+<!--  -->
+
 Install the requirements 
 
 ### pip install -r requirements.txt
 create a superuser 
 
 #### based on user name
+
+create a post gress database for it
+:default connection str: postgres://kwasa:1234@localhost:5432/alvan1
 
 ## This config assumen your are using windows
 
