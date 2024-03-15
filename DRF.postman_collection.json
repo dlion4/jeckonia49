@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "2fd3936d-3ccb-4d44-9365-07bf50fe6954",
+		"name": "DRF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33643116"
+	},
+	"item": [
+		{
+			"name": "Alvan",
+			"item": [
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "New Folder",
+							"item": [],
+							"description": "A variant folders for each **products**\n\nWill procced from here"
+						},
+						{
+							"name": "GET PRODUCTS",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": [
+								{
+									"count": 2,
+									"next": null,
+									"previous": null,
+									"results": [
+										{
+											"id": 15,
+											"name": "Electronics",
+											"image": "",
+											"obj_url": "http://127.0.0.1:8100/api/v1/drf/15/",
+											"update_url": "http://127.0.0.1:8100/api/v1/drf/15/update/",
+											"delete_url": "http://127.0.0.1:8100/api/v1/drf/15/delete/",
+											"product_variants": [
+												{
+													"id": 12,
+													"sku": "mihiya",
+													"name": "phone",
+													"slug": "mihiya",
+													"description": "some description",
+													"price": "7876.98",
+													"variant_url": "http://127.0.0.1:8100/api/v1/drf/15/variants/mihiya/",
+													"update_url": "http://127.0.0.1:8100/api/v1/drf/15/variants/mihiya/update/",
+													"delete_url": "http://127.0.0.1:8100/api/v1/drf/15/variants/mihiya/delete/"
+												}
+											]
+										},
+										{
+											"id": 16,
+											"name": "Abnow",
+											"image": "",
+											"obj_url": "http://127.0.0.1:8100/api/v1/drf/16/",
+											"update_url": "http://127.0.0.1:8100/api/v1/drf/16/update/",
+											"delete_url": "http://127.0.0.1:8100/api/v1/drf/16/delete/",
+											"product_variants": [
+												{
+													"id": 14,
+													"sku": "tina 1",
+													"name": "Abnow",
+													"slug": "tina-1",
+													"description": "some description edited",
+													"price": "76.98",
+													"variant_url": "http://127.0.0.1:8100/api/v1/drf/16/variants/tina-1/",
+													"update_url": "http://127.0.0.1:8100/api/v1/drf/16/variants/tina-1/update/",
+													"delete_url": "http://127.0.0.1:8100/api/v1/drf/16/variants/tina-1/delete/"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "GET PRODUCT",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": [
+								{
+									"id": 15,
+									"name": "Electronics",
+									"image": "",
+									"obj_url": "http://127.0.0.1:8100/api/v1/drf/15/",
+									"update_url": "http://127.0.0.1:8100/api/v1/drf/15/update/",
+									"delete_url": "http://127.0.0.1:8100/api/v1/drf/15/delete/",
+									"product_variants": [
+										{
+											"id": 12,
+											"sku": "mihiya",
+											"name": "phone",
+											"slug": "mihiya",
+											"description": "some description",
+											"price": "7876.98",
+											"variant_url": "http://127.0.0.1:8100/api/v1/drf/15/variants/mihiya/",
+											"update_url": "http://127.0.0.1:8100/api/v1/drf/15/variants/mihiya/update/",
+											"delete_url": "http://127.0.0.1:8100/api/v1/drf/15/variants/mihiya/delete/"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "UPDATE PRODUCT",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": [
+								{
+									"id": 15,
+									"name": "Electronics",
+									"image": "https://images.unsplash.com/photo-1587691592099-24045742c181?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dXJsfGVufDB8fDB8fHww",
+									"obj_url": "http://127.0.0.1:8100/api/v1/drf/15/",
+									"update_url": "http://127.0.0.1:8100/api/v1/drf/15/update/",
+									"delete_url": "http://127.0.0.1:8100/api/v1/drf/15/delete/",
+									"product_variants": [
+										{
+											"id": 12,
+											"sku": "mihiya",
+											"name": "phone",
+											"slug": "mihiya",
+											"description": "some description",
+											"price": "7876.98",
+											"variant_url": "http://127.0.0.1:8100/api/v1/drf/15/variants/mihiya/",
+											"update_url": "http://127.0.0.1:8100/api/v1/drf/15/variants/mihiya/update/",
+											"delete_url": "http://127.0.0.1:8100/api/v1/drf/15/variants/mihiya/delete/"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "CREATE PRODUCT",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": [
+								{
+									"id": 19,
+									"name": "kwasa marwa",
+									"image": "https://images.unsplash.com/photo-1584714268709-c3dd9c92b378?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHVybHxlbnwwfHwwfHx8MA%3D%3D",
+									"obj_url": "http://127.0.0.1:8100/api/v1/drf/19/",
+									"update_url": "http://127.0.0.1:8100/api/v1/drf/19/update/",
+									"delete_url": "http://127.0.0.1:8100/api/v1/drf/19/delete/",
+									"product_variants": [
+										{
+											"id": 17,
+											"sku": "kwasa sku removed",
+											"name": "hp laptop three",
+											"slug": "kwasa-sku-removed",
+											"description": "some description with postman three",
+											"price": "890.98",
+											"variant_url": "http://127.0.0.1:8100/api/v1/drf/19/variants/kwasa-sku-removed/",
+											"update_url": "http://127.0.0.1:8100/api/v1/drf/19/variants/kwasa-sku-removed/update/",
+											"delete_url": "http://127.0.0.1:8100/api/v1/drf/19/variants/kwasa-sku-removed/delete/"
+										}
+									]
+								}
+							]
+						}
+					],
+					"description": "This is a folder that carries all the products request"
+				}
+			]
+		}
+	]
+}

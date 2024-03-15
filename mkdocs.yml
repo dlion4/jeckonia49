@@ -1,0 +1,12 @@
+site_name: apis
+site_description: This is a api framework build ontop of django rest with ninja
+repo_url: https://github.com/jeckonia49/jeckonia49
+site_dir: site
+copyright: Copyright &copy; 2020, <a href="https://github.com/jeckonia49">jeckonia49</a>.
+dev_addr: 0.0.0.0:8001
+
+nav:
+  - Home: 'index.md'
+  - API:
+    - Authentication: 'api/authentication.md'
+    - Users: 'api/users.md'
