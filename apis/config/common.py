@@ -7,6 +7,9 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
+# Set default encoding to UTF-8
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer)
 
 APP_DIR = BASE_DIR / "apis"
 
