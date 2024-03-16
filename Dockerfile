@@ -8,7 +8,8 @@ WORKDIR /app
 
 RUN pip install -r requirements.txt
 
-WORKDIR /app
+RUN pip install --upgrade pip
+
 
 EXPOSE 8000
 
