@@ -9,6 +9,10 @@ jobs:
     container: python:3.9
     steps:
       - uses: actions/checkout@v2
+      - name: Install Docker
+        run: |
+          apt-get update
+          apt-get install -y docker.io
       - name: Build and Push Docker Image
         run: |
           docker build -t dandelionxxx/alvan .
