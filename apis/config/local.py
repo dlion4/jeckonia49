@@ -20,3 +20,10 @@ CSRF_TRUSTED_ORIGINS = [
     "http://localhost", 
     "https://*.ngrok-free.app"
 ] # needed for post request
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": APP_DIR / "db" / "db.sqlite3"
+    }
+}
