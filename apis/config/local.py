@@ -17,5 +17,6 @@ CORS_ALLOWED_ORIGINS = [] # add the frotned domain that will consume the api end
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost", "https://*.ngrok-free.app"
+    "http://localhost", 
+    "https://*.ngrok-free.app"
 ] # needed for post request

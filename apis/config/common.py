@@ -51,7 +51,7 @@ MIDDLEWARE = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ALLOWED_HOSTS = ["localhost", ".ngrok-free.app"]
+ALLOWED_HOSTS = ["localhost", ".ngrok-free.app", "*"]
 ROOT_URLCONF = 'apis.urls'
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 WSGI_APPLICATION = 'apis.wsgi.application'
