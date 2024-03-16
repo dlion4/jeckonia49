@@ -8,10 +8,11 @@ This is a api framework build ontop of django rest with ninja. Check out the pro
 # Prerequisites
 ## NOTE {Above} This config assumen your are using windows
 - [Docker](https://docs.docker.com/docker-for-mac/install/)  # optional
+# local dev we're using sqlite-> can change to postgres just by commenting the datasase variabcle in local.py file
 
 ## HOW TO RUN 
 
-### Option 1:
+### Option 1: 
 
 create vertual environment
 
