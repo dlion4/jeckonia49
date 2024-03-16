@@ -1,19 +1,21 @@
 # By Jeckonia Onyango <jeckonia49>
 
 [![Build Status](https://travis-ci.org/jeckonia49/jeckonia49.svg?branch=master)](https://travis-ci.org/jeckonia49/jeckonia49)
-[![Built with](https://img.shields.io/badge/Built_with-Cookiecutter_Django_Rest-F7B633.svg)](https://github.com/agconti/cookiecutter-django-rest)
+[![Built with](https://img.shields.io/badge/Built_with-Cookiecutter_Django_Rest-F7B633.svg)](https://github.com/agconti/cookiecutter-django)
 
 This is a api framework build ontop of django rest with ninja. Check out the project's [documentation](http://jeckonia49.github.io/jeckonia49/).
 
 # Prerequisites
 
-- [Docker](https://docs.docker.com/docker-for-mac/install/)  
+- [Docker](https://docs.docker.com/docker-for-mac/install/)  # optional
 
-# Local Development
+## HOW TO RUN 
+
+### Option 1:
+
 create vertual environment
-### python -m venv <environment_name>
 
-<!--  -->
+### python -m venv <environment_name>
 
 Install the requirements 
 
@@ -28,15 +30,18 @@ create a post gress database for it
 ## This config assumen your are using windows
 
 
-### Bellow are not neeed to run this app
+### option 2: using docker
 
-Start the dev server for local development:
-```bash
-docker-compose up
-```
+### follow the commands
 
-Run a command inside the docker container:
+pull the latest image
 
-```bash
-docker-compose run --rm web [command]
-```
+### docker push dandelionxxx/alvan:latest
+
+run the image on local machine
+
+docker run -e PORT=8000 -p 8000:8000
+
+### NOTE you need docker desktop top run the above commands
+
+
