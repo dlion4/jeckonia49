@@ -5,16 +5,12 @@ on: [push, workflow_call]
 jobs:
   build:
     name: Alvan CI Build
-  
     runs-on: ubuntu-latest
-
     container: python:3.9
-
     steps:
       - uses: actions/checkout@v2
       - name: Build and Push Docker Image
-        with:
-          image: dandelionxxx/alvan
-          registry: docker.io
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+        run: |
+          docker build -t dandelionxxx/alvan .
+          docker login docker.io -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_TOKEN }}
+          docker push dandelionxxx/alvan
