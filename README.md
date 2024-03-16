@@ -30,17 +30,17 @@ create a post gress database for it
 
 
 ### option 2: using docker
-### NOTE you need docker desktop top run the above commands
+# need docker desktop to run 
 
 ### follow the commands
 
 pull the latest image
 
-### docker push dandelionxxx/alvan:latest
+*docker pull dandelionxxx/alvan:latest*
 
 run the image on local machine
 
-docker run -e PORT=8000 -p 8000:8000
+*docker run -e PORT=8000 -p 8000:8000*
 
 
 
