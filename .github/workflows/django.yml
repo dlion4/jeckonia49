@@ -1,12 +1,14 @@
 name: Alvan CI API
 
-on: [push]
+on: [push, workflow_call]
 
 jobs:
   build:
     name: Alvan CI Build
   
     runs-on: ubuntu-latest
+
+    container: python:3.9
 
     steps:
       - uses: actions/checkout@v2
