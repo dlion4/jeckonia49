@@ -8,7 +8,7 @@ jobs:
     name: Quality Assurance Code Valuation
 
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     # strategy:
     #   matrix:
     #     os: [ubuntu-latest, windows-latest, macOS-latest]
