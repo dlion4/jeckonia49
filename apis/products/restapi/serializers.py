@@ -54,7 +54,7 @@ class ProductSerializer(serializers.ModelSerializer):
     A serializer for the Product model.
     """
     id = serializers.IntegerField(read_only=True)
-    product_variants = ProductVariantSerializer(many=True)
+    product_variants = ProductVariantSerializer(many=True, required=False)
 
     obj_url = serializers.SerializerMethodField()
     update_url = serializers.SerializerMethodField()
@@ -94,7 +94,6 @@ class ProductSerializer(serializers.ModelSerializer):
             variant = ProductVariant.objects.create(product=product, **variant_data)
             variant.slug = slugify(variant.sku)
             variant.save()
-        print(variant_data)
         return product
     
 

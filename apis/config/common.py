@@ -1,8 +1,6 @@
 import os
 from os.path import join
-# from distutils.util import strtobool
 import dj_database_url
-from configurations import Configuration
 from pathlib import Path
 import sys, codecs
 
@@ -75,6 +73,7 @@ ADMINS = (
 # Postgres
 DATABASES = {
     'default': dj_database_url.config(
+        engine="django.db.backends.postgresql",
         default='postgres://kwasa:1234@localhost:5432/alvan1',
         conn_max_age=int(os.getenv('POSTGRES_CONN_MAX_AGE', 600))
     )
