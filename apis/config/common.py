@@ -56,12 +56,6 @@ ROOT_URLCONF = 'apis.urls'
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 WSGI_APPLICATION = 'apis.wsgi.application'
 
-CORS_ALLOWED_ORIGINS = [] # add the frotned domain that will consume the api endppint
-
-
-CSRF_TRUSTED_ORIGINS = [
-    "localhost", ".ngrok-free.app"
-] # needed for post request
 
 # Email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
