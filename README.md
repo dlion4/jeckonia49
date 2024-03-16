@@ -6,7 +6,7 @@
 This is a api framework build ontop of django rest with ninja. Check out the project's [documentation](http://jeckonia49.github.io/jeckonia49/).
 
 # Prerequisites
-
+## NOTE {Above} This config assumen your are using windows
 - [Docker](https://docs.docker.com/docker-for-mac/install/)  # optional
 
 ## HOW TO RUN 
@@ -27,10 +27,10 @@ create a superuser
 create a post gress database for it
 :default connection str: postgres://kwasa:1234@localhost:5432/alvan1
 
-## This config assumen your are using windows
 
 
 ### option 2: using docker
+### NOTE you need docker desktop top run the above commands
 
 ### follow the commands
 
@@ -42,6 +42,6 @@ run the image on local machine
 
 docker run -e PORT=8000 -p 8000:8000
 
-### NOTE you need docker desktop top run the above commands
+
 
 
