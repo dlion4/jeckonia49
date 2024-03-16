@@ -36,7 +36,7 @@ inflection==0.5.1
 iniconfig==2.0.0
 injector==0.21.0
 ipdb==0.13.13
-ipython==8.13.2
+ipython
 isort==5.13.2
 jedi==0.19.1
 Jinja2==3.1.3
