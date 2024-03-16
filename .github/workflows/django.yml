@@ -1,0 +1,19 @@
+name: Alvan CI API
+
+on: [push]
+
+jobs:
+  build:
+    name: Alvan CI Build
+  
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and Push Docker Image
+        uses: python:3.9
+        with:
+          image: dandelionxxx/alvan
+          registry: docker.io
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
