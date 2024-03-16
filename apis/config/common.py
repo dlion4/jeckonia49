@@ -4,6 +4,8 @@ from os.path import join
 import dj_database_url
 from configurations import Configuration
 from pathlib import Path
+import sys, codecs
+
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -13,7 +15,6 @@ if sys.stdout.encoding != 'utf-8':
 
 APP_DIR = BASE_DIR / "apis"
 
-# class Common(Configuration):
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -31,6 +32,8 @@ INSTALLED_APPS = (
 
     'ninja_extra', #LINK - https://eadwincode.github.io/django-ninja-extra/
 
+    "corsheaders",
+
     # Your apps
     'apis.users',
 
@@ -42,6 +45,7 @@ INSTALLED_APPS = (
 MIDDLEWARE = (
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -49,10 +53,17 @@ MIDDLEWARE = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["localhost", ".ngrok-free.app"]
 ROOT_URLCONF = 'apis.urls'
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 WSGI_APPLICATION = 'apis.wsgi.application'
+
+CORS_ALLOWED_ORIGINS = [] # add the frotned domain that will consume the api endppint
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "localhost", ".ngrok-free.app"
+] # needed for post request
 
 # Email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -207,8 +218,8 @@ REST_FRAMEWORK = {
         # 'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        # 'rest_framework.authentication.SessionAuthentication',
-        # 'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     )
 }
 
